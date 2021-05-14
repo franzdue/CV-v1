@@ -106,11 +106,19 @@ a{
 }
 
 .resume .icon i,
-.resume .resume_right .resume_hobby ul li i{
+.resume .resume-right .resume-hobby ul li i{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+}
+
+.resume .icon i{
+    transition: all 0.1s ease-in-out;
+}
+
+.resume .icon i:hover{
+    transform: translate(-50%, -45%) scale(1.2);
 }
 
 .resume .resume-left ul li .data{
@@ -163,4 +171,88 @@ a{
     width: 520px;
     background: #F5F5F5;
     padding: 25px;
+}
+
+.resume .resume-right .bold{
+    color: #08A68A;
+}
+
+.resume .resume-right .resume-work ul, 
+.resume .resume-right .resume-education ul,
+.resume .resume-right .resume-hobby ul{
+    padding-left: 40px;
+    overflow: hidden;
+}
+
+.resume .resume-right ul li{
+    position: relative;
+}
+
+.resume .resume-right ul li .date{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.resume .resume-right ul li .info{
+    margin-bottom: 20px;
+}
+
+.resume .resume-right ul li:last-child .info{
+    margin-bottom: 0;
+}
+
+.resume .resume-right .resume-work ul li::before, 
+.resume .resume-right .resume-education ul li::before{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -25px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 2px solid #08A68A;
+}
+
+.resume .resume-right .resume-work ul li::after, 
+.resume .resume-right .resume-education ul li::after{
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: -21px;
+    width: 3px;
+    height: 112px;
+    background: #08A68A;
+}
+
+.resume .resume-right .resume-hobby ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume .resume-right .resume-hobby ul li{
+    width: 80px;
+    height: 80px;
+    border: 2px solid #08A68A;
+    border-radius: 50%;
+    position: relative;
+    color: #08A68A;
+}
+
+.resume .resume-right .resume-hobby ul li i{
+    font-size: 30px;
+}
+
+.resume .resume-right .resume-hobby ul li::before{
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: -40px;
+    width: 38px;
+    height: 2px;
+    background: #08A68A;
+}
+
+.resume .resume-right .resume-hobby ul li:last-child::before{
+    display: none;
 }
